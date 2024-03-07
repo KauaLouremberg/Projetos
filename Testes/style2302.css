@@ -1,0 +1,16 @@
+div {
+
+    width: 500px;
+    background-color: blue;
+    height: 100px;
+    box-shadow: 10px 10px 5px #888888;
+
+}
+
+#divRedonda {
+    text-align: center;
+    background: rgb(27, 225, 40);
+    width: 200px;
+    border-radius: 10px;
+
+}
