@@ -12,7 +12,7 @@ body {
   /*justify-content: center;
   align-items: center;
   min-height: 50vh;*/
-  background: url(/Assets/backgroundcad.jpg);
+  background: url(../Assets/gradient_1.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -21,7 +21,7 @@ body {
 .wrapper {
   
   text-align: center;
-  margin-left: 50%;
+  margin-left: 53%;
   width: 420px;
   height: fit-content;
   background: transparent;
@@ -30,6 +30,7 @@ body {
   border-radius: 10px;
   padding: 30px 40px;
   transform: translateY(50%);
+  position: fixed;
 }
 
 .wrapper h1 {
@@ -142,22 +143,35 @@ body {
   text-decoration: underline;
 }
 
-.imagem {
-  position: absolute;
-  transform: translateX();
-  transform: translateY(17%);
-}
-
 .centro {
-  left: 50%;
+    left: 50%;
     top: 50%;
     margin-left: -500px;
     margin-top: -225px;
     position: fixed;
     width: 1000px;
     height: 550px;
-    background: #115334;
+    background: #184f8f;
     color: #fff;
     border-radius: 30px;
+
+}
+
+.imagem{
+
+  left: 50%;
+  top: 50%;
+  margin-left: -500px;
+  margin-top: -225px;
+  position: fixed;
+  width: 500px;
+  height: 550px;
+  background: url(../Assets/ecommerce-1706105_640.png);
+  border-radius: 30px;
+  background-position: 40% 0%;
+  background-size: cover;
+  background-attachment: local;
+  background-repeat: no-repeat;
+  
 
 }
