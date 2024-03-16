@@ -14,7 +14,7 @@ body {
   align-items: center;
   background: url(../Assets/parede-de-concreto-azul-marinho-com-arranhoes.jpg);
   background-position: center;
-  background-size: 2000px;
+  background-size: auto;
 }
 
 .wrapper {
@@ -31,7 +31,7 @@ body {
   padding: 30px 40px;
    margin-right: 5%; 
   /* transform: translateY(50%); */
-  /* position: fixed; */
+  /* position: absolute; */
 }
  
 .wrapper h1 {
@@ -105,19 +105,19 @@ body {
   font-weight: 600;
 }
 
-.wrapper .register-link {
+.wrapper .index-link {
   font-size: 14.5px;
   text-align: center;
   margin-top: 20px 0 15px;
 }
 
-.register-link p a {
+.index-link p a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
 }
 
-.register-link p a:hover {
+.index-link p a:hover {
   text-decoration: underline;
 }
 
@@ -126,10 +126,10 @@ body {
   top: 60%;
   margin-left: -500px;
   margin-top: -300px;
-  position: fixed;
+  position: absolute;
   width: 1000px;
   height: 600px;
-  background: #184f8f;
+  background: linear-gradient(to right,  #2c5de6,#04073b) ;
   color: #fff;
   border-radius: 30px;
   border: 2px solid rgb(253, 253, 253);
@@ -143,7 +143,7 @@ left: 50%;
 top: 60%;
 margin-left: -500px;
 margin-top: -300px;
-position: fixed;
+position: absolute;
 width: 500px;
 height: 600px;
 background: url(../Assets/Mobile\ login.gif);

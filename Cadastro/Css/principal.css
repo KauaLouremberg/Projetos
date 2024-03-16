@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.topbar{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #04073b, #2c5de6);
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 10000px;
+  
+
+}
+.brand{
+    
+    font-size: 24px;
+  font-weight: bold;
+
+}
+.menu{
+
+    display: flex;
+  align-items: center;
+}
+.menuItem{
+
+    text-decoration: none;
+  color: #fff;
+  margin: 0 15px;
+  transition: color 0.3s ease-in-out;
+
+}
+
+.menuItem:hover {
+    color: #e5a5ff;
+  }
+
+.ctnButton{
+  background-color: #362db8;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+.ctaButton:hover {
+    background-color: #6b00b3;
+}
+.logo{
+    display: flex;
+    align-items: center;
+  }
+
+.centro{
+    background-color: aqua;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 10%;
+    margin-top: auto;
+    width: 20vh;
+    
+}
