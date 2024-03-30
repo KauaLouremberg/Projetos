@@ -1,3 +1,6 @@
+<?php
+    include("./conexao.php");
+?>
 
 <!DOCTYPE html>
 <html lang="eng">
@@ -38,7 +41,7 @@
           <li><a href="#">Produtos</a></li>
           <li><a href="#">Suporte</a></li>
           <li><a href="#">Fale Conosco</a></li>
-          <li><button class="login-button" href="/Html/register.html">Registrar-se</button></li>
+          <li><button class="login-button" href="./register.php">Registrar-se</button></li>
       </ul>
   </nav>
   <script src="/JS/index.js"></script>
@@ -50,11 +53,11 @@
       <form action="">
         <span style="color:#ffffff; font-size:50px; font-weight:bold; letter-spacing: 5px;margin-left: 1px;">LOGIN</span>
         <div class="input-box">
-          <input type="text" placeholder="Nome Usuário" required />
+          <input type="text" name=username placeholder="Nome Usuário"  required />
           <i class="bx bxs-user"></i>
         </div>
         <div class="input-box">
-          <input type="password" placeholder="Senha" required />
+          <input type="password" name="password" placeholder="Senha"  required />
           <i class="bx bxs-lock-alt"></i>
         </div>
         <button type="submit" class="btn">Login</button>
@@ -65,7 +68,7 @@
         </div>
         
         <div class="register-link">
-          <p>Não possui uma conta? <a href="../Html/register.html">Registre-se</a>
+          <p>Não possui uma conta? <a href="./register.php">Registre-se</a>
             
         </div>
       </div>
