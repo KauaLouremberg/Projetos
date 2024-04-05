@@ -59,8 +59,6 @@ catch (Exception $e) {
 
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="eng">
   <head>

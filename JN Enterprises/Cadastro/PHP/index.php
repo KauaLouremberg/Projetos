@@ -1,5 +1,55 @@
 <?php
+
     include("./conexao.php");
+    session_start();
+
+    if(isset($_POST['user']) || isset($_POST['senha'])) {
+      
+
+      if(strlen($_POST['user']) == 0) {
+        echo "Preencha seu usuario";
+      } else if(strlen($_POST['senha']) == 0) {
+        echo "Preencha sua senha";
+      } else {
+
+        $user = $conn->real_escape_string($_POST['user']);
+        $senha = $conn->real_escape_string($_POST['senha']);
+
+        $sql_code = "SELECT * FROM logins WHERE user = '$user'";
+        
+        $sql_query = $conn->query($sql_code) or die("Falha na execução do código SQL: " . $conn->error);
+
+        $linha = $sql_query->fetch_assoc();
+
+        $quantidade = $sql_query->num_rows;
+
+        if($quantidade >= 1) {
+
+          $usuario = $linha['user'];
+          $senhaHash = $linha['password'];
+          $email = $linha['email'];
+
+          if(password_verify($senha,$senhaHash)){
+
+
+
+            if(!isset($_SESSION)) {
+              session_start();
+
+            }
+
+            $_SESSION['user'] = $usuario;
+            $_SESSION['email'] = $email;
+
+            header("Location: principal.php");
+  
+          }
+          else {
+            echo"Falha ao logar : E-mail ou senha incorretos";
+          }
+        }
+      }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -50,17 +100,17 @@
     <div  class="imagem" >
     </div>
     <div class="wrapper">
-      <form action="">
+      <form action="" method ="POST"> 
         <span style="color:#ffffff; font-size:50px; font-weight:bold; letter-spacing: 5px;margin-left: 1px;">LOGIN</span>
         <div class="input-box">
-          <input type="text" name=username placeholder="Nome Usuário"  required />
+          <input type="text" name="user" placeholder="Nome Usuário"  required />
           <i class="bx bxs-user"></i>
         </div>
         <div class="input-box">
-          <input type="password" name="password" placeholder="Senha"  required />
+          <input type="password" name="senha" placeholder="Senha"  required />
           <i class="bx bxs-lock-alt"></i>
         </div>
-        <button type="submit" class="btn">Login</button>
+        <button type="submit" class="btn" name>Login</button>
 
         <div class="subEnviar">
           <span id="manter"><label><input type="checkbox" />Mantenha-me conectado</label></span>
