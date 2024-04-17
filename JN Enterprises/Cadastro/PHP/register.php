@@ -3,6 +3,8 @@ $errorConn = false;
 $errorUserJaExiste = false;
 $errorEmailJaUtilizado = false;
 $errorSenhasDiferentes = false;
+$erroruserorpassword = false;
+
 try {
   include("conexao.php");
 
