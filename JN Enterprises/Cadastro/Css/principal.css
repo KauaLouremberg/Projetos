@@ -12,6 +12,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background: url(../Assets/gradient_2.jpg);
 }
 nav {
   height: 4rem;
@@ -256,4 +257,7 @@ nav {
   margin-left: 50%;
   margin-right: 50%;
   transform: translate(-200%, 50%);
+}
+#logojn{
+  transform: translate(80%,10%);
 }

@@ -138,10 +138,10 @@ body {
   left: 50%;
   top: 50%;
   margin-left: -500px;
-  margin-top: -225px;
+  margin-top: -246px;
   position: absolute;
   width: 1000px;
-  height: 550px;
+  height: 500px;
   background: linear-gradient(to right, #2c5de6, #04073b);
   color: #fff;
   border-radius: 30px;
@@ -351,4 +351,8 @@ nav {
     max-height: 10rem;
     padding-right: 5rem;
   }
+}
+#logojn{
+
+  transform: translate(80%,10%);
 }

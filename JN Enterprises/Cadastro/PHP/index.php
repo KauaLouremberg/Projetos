@@ -24,11 +24,12 @@ if (isset($_POST['enviar'])) {
     $linha = $sql_query->fetch_assoc();
 
     $quantidade = $sql_query->num_rows;
-
+    $senhaHash = $linha['password'];
+    
     if ($quantidade >= 1 and password_verify($senha, $senhaHash)) {
 
       $usuario = $linha['user'];
-      $senhaHash = $linha['password'];
+      
       $email = $linha['email'];
       $_SESSION['user'] = $usuario;
       $_SESSION['email'] = $email;
@@ -61,7 +62,7 @@ if (isset($_POST['enviar'])) {
 <body>
   <nav>
     <div class="logo" style="display: flex;align-items: center;">
-      <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">JN EN</span>
+    <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">JN EN</span>
     </div>
     <div class="hamburger">
       <div class="line1"></div>
@@ -75,6 +76,7 @@ if (isset($_POST['enviar'])) {
       <li><a href="#">Suporte</a></li>
       <li><a href="#">Fale Conosco</a></li>
       <li><button class="login-button" href="./register.php">Registrar-se</button></li>
+      <li><img src="../Assets/logoenterprises.png" height="100px" width="100px" id="logojn"></li>
     </ul>
   </nav>
   <script src="/JS/index.js"></script>

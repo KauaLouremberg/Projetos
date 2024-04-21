@@ -105,6 +105,7 @@ catch (Exception $e) {
           <li><a href="#">Suporte</a></li>
           <li><a href="#">Fale Conosco</a></li>
           <li><button class="login-button" href="./index.php">Login</button></li>
+          <li><img src="../Assets/logoenterprises.png" height="100px" width="100px" id="logojn"></li>
       </ul>
   </nav>
   <script src="/JS/index.js"></script>
@@ -151,8 +152,6 @@ catch (Exception $e) {
         </form>
       </div> 
     </div>
-
-    
   </body>
 </html>
 <script src="../JS/register.js"></script>
