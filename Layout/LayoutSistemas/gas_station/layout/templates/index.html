@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>Posto de Gasolina</title>
+</head>
+<body>
+    <h1><span style="color:#01939c; font-size:40px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">Posto de Combustível</span></h1>
+    <br>
+    <br>
+    <br>
+    <h2><span style="color:#01939c; font-size:30px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">Tipos de Combustível</span></h2>
+    <ul class="list-group list-group-flush">{% for combustivel in combustiveis %}
+        <li class="list-group-item">{{ combustivel.tipo }} - R$ {{ combustivel.valor_litro }}</li>
+    {% endfor %}
+    </ul>
+<br>
+    <br>
+    <br>
+    <h2 id="registrar"><span style="color:#01939c; font-size:30px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">Bombas de Combustível</span></h2>
+    <ul class="list-group list-group-flush">{% for bomba in bombas %}
+        <li class="list-group-item">{{ bomba.localizacao }} - {{ bomba.tipo_combustivel.tipo }}</li>
+    {% endfor %}
+    </ul>
+<br>
+    <br>
+    <br>
+    <h2 class="registrar"><span style="color:#01939c; font-size:30px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">Vendas de Combustível</span></h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Bomba</th>
+                <th>Usuário</th>
+                <th>Quantidade de Litros</th>
+                <th>Valor Total</th>
+                <th>Data/Hora de Saída</th>
+            </tr>
+        </thead>
+        <tbody class="vendas">
+            {% for venda in vendas %}
+                <tr>
+                    <td>{{ venda.bomba.localizacao }}</td>
+                    <td>{{ venda.usuario.username }}</td>
+                    <td>{{ venda.quantidade_litros }}</td>
+                    <td>R$ {{ venda.valor_total }}</td>
+                    <td>{{ venda.data_hora_saida }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<br>
+    <br>
+    <br>
+    <h2 id="venda"><span style="color:#01939c; font-size:30px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">Registrar Venda de Combustível</span></h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary" >Registrar Venda</button>
+    </form>
+</body>
+</html>

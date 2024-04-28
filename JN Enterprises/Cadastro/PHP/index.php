@@ -29,12 +29,16 @@ if (isset($_POST['enviar'])) {
     if ($quantidade >= 1 and password_verify($senha, $senhaHash)) {
 
       $usuario = $linha['user'];
-      
       $email = $linha['email'];
+
       $_SESSION['user'] = $usuario;
       $_SESSION['email'] = $email;
       mysqli_close($conn);
+
+
       header("Location: principal.php");
+
+
     } else {
       $erroruserorpassword = true;
       echo '';
@@ -62,7 +66,7 @@ if (isset($_POST['enviar'])) {
 <body>
   <nav>
     <div class="logo" style="display: flex;align-items: center;">
-    <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">JN EN</span>
+    <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">JN ENTERPRISES</span>
     </div>
     <div class="hamburger">
       <div class="line1"></div>
@@ -70,7 +74,7 @@ if (isset($_POST['enviar'])) {
       <div class="line3"></div>
     </div>
     <ul class="nav-links">
-      <li><a href="#">Menu</a></li>
+      <li><a href="#" >Menu</a></li>
       <li><a href="#">Serviços</a></li>
       <li><a href="#">Produtos</a></li>
       <li><a href="#">Suporte</a></li>
@@ -88,7 +92,7 @@ if (isset($_POST['enviar'])) {
       <form action="" method="POST">
         <span style="color:#ffffff; font-size:50px; font-weight:bold; letter-spacing: 5px;margin-left: 1px;">LOGIN</span>
         <div class="input-box">
-          <input type="text" name="user" placeholder="Nome Usuário" required />
+          <input type="text" name="user" placeholder="Nome Usuário" required autocomplete="off" />
           <i class="bx bxs-user"></i>
         </div>
         <div class="input-box">

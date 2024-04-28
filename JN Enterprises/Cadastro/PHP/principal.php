@@ -36,7 +36,7 @@
     <nav>
       <div class="logo" style="display: flex; align-items: center">
         <span
-          style="color: #01939c;font-size: 26px;font-weight: bold;letter-spacing: 1px;margin-left: 20px;">JN EN</span>
+          style="color: #01939c;font-size: 26px;font-weight: bold;letter-spacing: 1px;margin-left: 20px;">JN ENTERPRISES</span>
       </div>
       <div class="hamburger">
         <div class="line1"></div>

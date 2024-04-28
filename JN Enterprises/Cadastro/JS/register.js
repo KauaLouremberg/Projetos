@@ -65,3 +65,17 @@ function falhaSenhasDiferentes() {
         font-size: 1em;
     `;
 }
+function falhacadastroConcluido() {
+  let falhaDiv = document.getElementById("divFalha");
+  let falhaP = document.getElementById("pFalha");
+  falhaP.innerHTML = "Cadastro Concluido";
+  falhaDiv.style = `background-color: #A4EA4F;
+                    border-radius: 5px;
+                    height: fit-content;
+                    width: 100%;
+                    margin: 15px 0px;`;
+  falhaP.style = `
+                    padding: 10px 10px;
+                    font-size: 1em;
+                `;
+}

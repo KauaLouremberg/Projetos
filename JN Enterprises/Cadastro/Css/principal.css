@@ -44,6 +44,7 @@ nav {
   align-items: center;
   text-transform: uppercase;
   transform: translateY(15%);
+  margin-left: -5vw;
 }
 .nav-links li a {
   text-decoration: none;
@@ -258,6 +259,6 @@ nav {
   margin-right: 50%;
   transform: translate(-200%, 50%);
 }
-#logojn{
-  transform: translate(80%,10%);
+#logojn {
+  transform: translate(80%, 10%);
 }

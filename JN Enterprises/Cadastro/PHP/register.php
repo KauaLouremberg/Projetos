@@ -4,6 +4,7 @@ $errorUserJaExiste = false;
 $errorEmailJaUtilizado = false;
 $errorSenhasDiferentes = false;
 $erroruserorpassword = false;
+$errorcadastroConcluido = false;
 
 try {
   include("conexao.php");
@@ -35,6 +36,13 @@ try {
           $errorEmailJaUtilizado = true;
           
         }
+        else if ($linha['email'] and $linha['user'] and $linha['password'])
+         $errorcadastroConcluido = true;
+
+
+
+
+         
       }
       else{
         $hash = password_hash($password, PASSWORD_DEFAULT);
@@ -91,7 +99,7 @@ catch (Exception $e) {
   <body>
     <nav>
       <div class="logo" style="display: flex;align-items: center;">
-       <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">JN EN</span>
+       <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">JN ENTERPRISES</span>
       </div>
       <div class="hamburger">
           <div class="line1"></div>
@@ -118,22 +126,22 @@ catch (Exception $e) {
           <span style="color:#ffffff; font-size:50px; font-weight:bold; letter-spacing: 3px;margin-left: 1px;">REGISTRO </span>
   
           <div class="input-box">
-            <input type="text" name="user" placeholder="Nome Usuário" required="">
+            <input type="text" name="user" placeholder="Nome Usuário" required autocomplete="off">
             <i class="bx bxs-user"></i>
           </div>
   
           <div class="input-box">
-            <input type="email" name="email" placeholder="Email" required="">
+            <input type="email" name="email" placeholder="Email" required autocomplete="off">
             <i class="bx bxs-envelope"></i>
           </div>
   
           <div class="input-box">
-            <input type="password" name="password" placeholder="Senha" required="">
+            <input type="password" name="password" placeholder="Senha" required>
             <i class="bx bxs-lock-alt"></i>
           </div>
   
           <div class="input-box">
-            <input type="password" name="s_password" placeholder="Confirme a senha" required="">
+            <input type="password" name="s_password" placeholder="Confirme a senha" required>
             <i class="bx bxs-lock-alt"></i>
           </div>
           
@@ -183,5 +191,11 @@ catch (Exception $e) {
           falhaSenhasDiferentes();
         </script>
       ";
+  }
+  else if ($errorcadastroConcluido){
+    echo"
+        <script>
+          falhacadastroConcluido();
+        </script>";
   }
 ?>
