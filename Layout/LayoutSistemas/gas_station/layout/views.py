@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import fuel, pump, fuelsale
 from .form import fuelsaleform
+from django.urls import reverse
+
 
 
 def vendas_registradas(request):
