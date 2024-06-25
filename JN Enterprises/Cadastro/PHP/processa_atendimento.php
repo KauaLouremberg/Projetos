@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitAtendimento'])) 
         $mail->Host = 'smtp.gmail.com'; // Configure com o seu servidor SMTP
         $mail->SMTPAuth = true;
         $mail->Username = 'kaualouremberg@gmail.com'; // Seu endereço de email
-        $mail->Password = 'ridp ljza chax sgnq'; // Sua senha de email
+        $mail->Password = 'xxxxxxxxxxxxx'; // Sua senha de email
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
