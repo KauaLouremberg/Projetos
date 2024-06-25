@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  
 }
 
 body {
@@ -15,6 +15,7 @@ body {
   background: url(../Assets/gradient_2.jpg);
 }
 nav {
+  
   height: 4rem;
   width: 100vw;
   background-color: #12215e;
@@ -59,7 +60,12 @@ nav {
 .nav-links li a:hover::before {
   width: 80%;
 }
-
+a {
+    color: inherit;
+    text-decoration: unset;
+    font-weight: 700;
+    color:#61dafb;
+  }
 /*Styling Buttons*/
 .login-button {
   background-color: transparent;
@@ -202,63 +208,4 @@ nav {
     max-height: 10rem;
     padding-right: 5rem;
   }
-}
-.card {
-  width: 290px;
-  height: fit-content;
-  background: black;
-  border-radius: 20px;
-  transition: all 0.3s;
-}
-
-.card2 {
-  width: 290px;
-  height: fit-content;
-  background-color: #1a1a1a;
-  border-radius: 20px;
-  transition: all 0.2s;
-  color: #fff;
-  text-align: center;
-}
-
-.card2 img {
-  width: 290px;
-  height: 190px;
-  border-radius: 12px;
-  background: url(../Assets/bolos-vovo-palmirinha-3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: local;
-  background-position: 40% 45%;
-}
-.card2 button {
-  margin-top: 28%;
-  background-color: #ffffff;
-  width: 290px;
-  border-radius: 25px;
-}
-.preco {
-  position: absolute;
-  margin-left: 50%;
-  margin-right: 10%;
-  transform: translate(-50%, 50%);
-  margin-top: 15%;
-}
-
-.card2:hover {
-  transform: scale(0.98);
-  border-radius: 20px;
-}
-
-.card:hover {
-  box-shadow: 0px 0px 30px 1px rgba(255, 255, 255, 0.3);
-}
-.card-position {
-  position: absolute;
-  margin-left: 50%;
-  margin-right: 50%;
-  transform: translate(-200%, 50%);
-}
-#logojn {
-  transform: translate(80%, 10%);
 }

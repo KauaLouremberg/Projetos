@@ -234,7 +234,12 @@ nav {
 .hamburger {
   display: none;
 }
-
+a {
+  color: inherit;
+  text-decoration: unset;
+  font-weight: 700;
+  color:#61dafb;
+}
 /*Stying for small screens*/
 @media screen and (max-width: 800px) {
   nav {

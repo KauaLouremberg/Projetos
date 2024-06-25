@@ -74,11 +74,11 @@ if (isset($_POST['enviar'])) {
       <div class="line3"></div>
     </div>
     <ul class="nav-links">
-      <li><a href="#" >Menu</a></li>
+      <li><a href="../PHP/index.php" >Menu</a></li>
       <li><a href="#">Serviços</a></li>
       <li><a href="#">Produtos</a></li>
       <li><a href="#">Suporte</a></li>
-      <li><a href="#">Fale Conosco</a></li>
+      <li><a href="../PHP/atendimento.php">Fale Conosco</a></li>
       <li><button class="login-button" href="./register.php">Registrar-se</button></li>
       <li><img src="../Assets/logoenterprises.png" height="100px" width="100px" id="logojn"></li>
     </ul>
