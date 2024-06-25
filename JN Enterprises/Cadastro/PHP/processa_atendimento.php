@@ -20,14 +20,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitAtendimento'])) 
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com'; // Configure com o seu servidor SMTP
         $mail->SMTPAuth = true;
-        $mail->Username = 'kaualouremberg@gmail.com'; // Seu endereço de email
+        $mail->Username = 'xxxxxxx@xxxxxx.com'; // Seu endereço de email
         $mail->Password = 'xxxxxxxxxxxxx'; // Sua senha de email
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // Remetente e destinatário
         $mail->setFrom($mailFrom);
-        $mail->addAddress('kaualouremberg@gmail.com'); // Endereço de email do destinatário
+        $mail->addAddress('xxxxxxxxxxxxxxxxx.com'); // Endereço de email do destinatário
 
         // Conteúdo do email
         $mail->isHTML(true);
