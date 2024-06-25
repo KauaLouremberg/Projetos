@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitAtendimento'])) 
     try {
         // Configuração do servidor SMTP
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // Configure com o seu servidor SMTP
+        $mail->Host = 'xxxxxxxxxx'; // Configure com o seu servidor SMTP
         $mail->SMTPAuth = true;
         $mail->Username = 'xxxxxxx@xxxxxx.com'; // Seu endereço de email
         $mail->Password = 'xxxxxxxxxxxxx'; // Sua senha de email
